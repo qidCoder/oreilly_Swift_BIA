@@ -3,10 +3,14 @@ import SwiftUI
 // 10..<35
 struct OvercastView: View {
     var body: some View {
-        VStack {
-            Image("overcast")
-                .resizable()
-                .edgesIgnoringSafeArea(.all)
+        VStack{
+            Text("Title 1")
+            Text("subtitle")
+            Rectangle()
+            Divider()
+            Text("Time stamp")
+            Text("controls")
+            Text("controls2")
         }
     }
 }
