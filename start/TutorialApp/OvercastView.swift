@@ -2,19 +2,23 @@ import SwiftUI
 
 // 10..<35
 struct OvercastView: View {
-    var body: some View {//adding view modifiers for styling like CSS
+    var body: some View {
         VStack{
             //titles
             HStack{
                 Image(systemName: "square")
                     .foregroundColor(.orange)
+                    .font(.title3) //you can add font modifiers to images too
                 VStack{
                     Text("Title 1")
-                    Text("subtitle")
+                    Text("subtitle".uppercased())
+                        .font(.caption)
                         .foregroundColor(.gray)
                 }
+                .frame(maxWidth: .infinity) //takes up width of device
                 Image(systemName: "square")
                     .foregroundColor(.orange)
+                    .font(.title3)
             }
             //image
             Rectangle()
@@ -38,6 +42,8 @@ struct OvercastView: View {
                 Image(systemName: "square")
             }
             .foregroundColor(.orange)
+            .font(.largeTitle)
+            .scaleEffect(1.5) //can make it even bigger
 
             //constrol2
             HStack{
