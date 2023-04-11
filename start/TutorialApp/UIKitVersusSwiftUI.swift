@@ -1,5 +1,7 @@
 import SwiftUI
 
+//this is UIKit, older way to code
+//notice how many lines of code
 // 0..<5
 class ViewControllerThinkingViewController: UIViewController {
     override func viewDidLoad() {
@@ -35,9 +37,25 @@ class ViewControllerThinkingViewController: UIViewController {
     }
 }
 
+//lets rewrite it in SwiftUI
+struct BlueAndWhiteView: View{
+    var body: some View {
+        ZStack {//Zstack stacks items
+            Color.blue //bottom layer
+            Rectangle()//next layer
+                .frame(width: 100, height: 100)
+                .foregroundColor(.white)
+            Text("SwiftUI")
+        }
+
+    }
+}
+
 struct UIKitVersusSwiftUI_Previews: PreviewProvider {
     static var previews: some View {
-        ViewControllerThinkingViewController()
-            .preview()
+//        ViewControllerThinkingViewController()
+//            .preview()
+
+        BlueAndWhiteView()
     }
 }
