@@ -23,6 +23,8 @@ struct OvercastView: View {
                 }
                 //image
                 Rectangle()
+                    .frame(width: geometry.size.height * 0.4, height: geometry.size.height * 0.4) //resize the rectangle to adjust to the screen dimensions
+                    .aspectRatio(1, contentMode: .fit) //specify a square
 
                 //timestamp
                 VStack{
@@ -30,23 +32,30 @@ struct OvercastView: View {
                         .foregroundColor(.orange)
                     HStack{
                         Text("35:00")
+                        Spacer()
                         Text("1:17")
                     }
                     .foregroundColor(.gray)
 
                 }
 
-                //constrols
+                Spacer()
+
+                //controls
                 HStack{
                     Image(systemName: "square")
+                        .frame(maxWidth: .infinity)
                     Image(systemName: "square")
+                        .frame(maxWidth: .infinity)
                     Image(systemName: "square")
+                        .frame(maxWidth: .infinity)
                 }
                 .foregroundColor(.orange)
                 .font(.largeTitle)
-                .scaleEffect(1.5)
 
-                //constrol2
+                Spacer()//essentially adds an invisible rectangle here to push the bottom elements down
+
+                //controls2
                 HStack{
                     Image(systemName: "square")
                     Image(systemName: "square")
