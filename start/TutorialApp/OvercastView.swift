@@ -4,13 +4,43 @@ import SwiftUI
 struct OvercastView: View {
     var body: some View {
         VStack{
-            Text("Title 1")
-            Text("subtitle")
+            //titles
+            HStack{
+                Image(systemName: "square")
+                VStack{
+                    Text("Title 1")
+                    Text("subtitle")
+                }
+                Image(systemName: "square")
+            }
+            //image
             Rectangle()
-            Divider()
-            Text("Time stamp")
-            Text("controls")
-            Text("controls2")
+
+            //timestamp
+            VStack{
+                Divider()
+                HStack{
+                    Text("35:00")
+                    Text("1:17")
+                }
+
+            }
+
+            //constrols
+            HStack{
+                Image(systemName: "square")
+                Image(systemName: "square")
+                Image(systemName: "square")
+            }
+
+            //constrol2
+            HStack{
+                Image(systemName: "square")
+                Image(systemName: "square")
+                Image(systemName: "square")
+                Image(systemName: "square")
+                Image(systemName: "square")
+            }
         }
     }
 }
