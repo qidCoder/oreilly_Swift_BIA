@@ -2,16 +2,19 @@ import SwiftUI
 
 // 10..<35
 struct OvercastView: View {
-    var body: some View {
+    var body: some View {//adding view modifiers for styling like CSS
         VStack{
             //titles
             HStack{
                 Image(systemName: "square")
+                    .foregroundColor(.orange)
                 VStack{
                     Text("Title 1")
                     Text("subtitle")
+                        .foregroundColor(.gray)
                 }
                 Image(systemName: "square")
+                    .foregroundColor(.orange)
             }
             //image
             Rectangle()
@@ -19,10 +22,12 @@ struct OvercastView: View {
             //timestamp
             VStack{
                 Divider()
+                    .foregroundColor(.orange)
                 HStack{
                     Text("35:00")
                     Text("1:17")
                 }
+                .foregroundColor(.gray)
 
             }
 
@@ -32,6 +37,7 @@ struct OvercastView: View {
                 Image(systemName: "square")
                 Image(systemName: "square")
             }
+            .foregroundColor(.orange)
 
             //constrol2
             HStack{
@@ -41,6 +47,7 @@ struct OvercastView: View {
                 Image(systemName: "square")
                 Image(systemName: "square")
             }
+            .foregroundColor(.orange)
         }
     }
 }
